@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-12-15T12:36:49 CST" name="Default suite" finished-at="2022-12-15T12:38:20 CST" duration-ms="91575">
+    <groups>
+    </groups>
+    <test started-at="2022-12-15T12:36:49 CST" name="Default test" finished-at="2022-12-15T12:38:20 CST" duration-ms="91575">
+      <class name="loginUsingDataProvider.Login">
+        <test-method signature="loginWithBothCorrect(java.lang.String,java.lang.String)[pri:0, instance:loginUsingDataProvider.Login@193f604a]" started-at="2022-12-15T12:36:49 CST" name="loginWithBothCorrect" data-provider="loginData" finished-at="2022-12-15T12:37:24 CST" duration-ms="35075" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[rekaharisri@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Admi2/888''']]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithBothCorrect -->
+        <test-method signature="loginWithBothCorrect(java.lang.String,java.lang.String)[pri:0, instance:loginUsingDataProvider.Login@193f604a]" started-at="2022-12-15T12:37:24 CST" name="loginWithBothCorrect" data-provider="loginData" finished-at="2022-12-15T12:37:42 CST" duration-ms="18166" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[rekaha@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Admin123///888''']]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithBothCorrect -->
+        <test-method signature="loginWithBothCorrect(java.lang.String,java.lang.String)[pri:0, instance:loginUsingDataProvider.Login@193f604a]" started-at="2022-12-15T12:37:42 CST" name="loginWithBothCorrect" data-provider="loginData" finished-at="2022-12-15T12:38:00 CST" duration-ms="17768" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[rekahari@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Admi2/888''']]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithBothCorrect -->
+        <test-method signature="loginWithBothCorrect(java.lang.String,java.lang.String)[pri:0, instance:loginUsingDataProvider.Login@193f604a]" started-at="2022-12-15T12:38:00 CST" name="loginWithBothCorrect" data-provider="loginData" finished-at="2022-12-15T12:38:20 CST" duration-ms="20447" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[rekaharisri@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Admin123///888''']]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithBothCorrect -->
+      </class> <!-- loginUsingDataProvider.Login -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
