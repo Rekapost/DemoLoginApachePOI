@@ -6,12 +6,17 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class CorrectUserName {
 	
 	@Test
 	@Parameters({"username","password"})
 	public void loginWithCorrectUserName(String userName,String  passWord) {
-		System.setProperty("webdriver.chrome.driver","C:\\Users\\Reka\\Drivers\\chromedriver.exe");
+		//System.setProperty("webdriver.chrome.driver","C:\\Users\\Reka\\Drivers\\chromedriver.exe");
+		WebDriverManager.chromedriver().setup();		
+        WebDriverManager.chromedriver().clearDriverCache();
+        WebDriverManager.chromedriver().clearResolutionCache();
 		WebDriver driver=new ChromeDriver();
 		driver.get("https://practice.automationtesting.in/my-account/");
 		WebElement UsernameBox=driver.findElement(By.id("username"));

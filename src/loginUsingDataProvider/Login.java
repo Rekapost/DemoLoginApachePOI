@@ -3,8 +3,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeDriverService;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Login {
 	
@@ -24,7 +26,16 @@ String[][] data={
 	
 	@Test(dataProvider ="loginData" )
 		public void loginWithBothCorrect(String userName,String  passWord) {
-			System.setProperty("webdriver.chrome.driver","C:\\Users\\Reka\\Drivers\\chromedriver.exe");
+			//System.setProperty("webdriver.chrome.driver","C:\\Users\\Reka\\Drivers\\chromedriver.exe");
+			WebDriverManager.chromedriver().setup();		
+	        WebDriverManager.chromedriver().clearDriverCache();
+	        WebDriverManager.chromedriver().clearResolutionCache();
+	        
+//	        ChromeDriverService chromeDriverService = new ChromeDriverService.Builder().usingAnyFreePort().build();
+//            webDriver = new ChromeDriver(chromeDriverService, options);
+//            webDriver.manage().window().maximize();
+//            ((JavascriptExecutor) webDriver).executeScript("document.body.style.zoom='100%';");
+            
 			WebDriver driver=new ChromeDriver();
 			driver.get("https://practice.automationtesting.in/my-account/");
 			WebElement UsernameBox=driver.findElement(By.id("username"));

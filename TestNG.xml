@@ -1,23 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 <suite name="Login Test Suite" >
-
 <test  name="Login To Application">
-<classes>
-<class name="loginUsingDataProvider.Login"></class>
-</classes>
+			<classes>
+				<class name="loginUsingDataProvider.Login"></class>
+			</classes>
 </test>
 
 </suite>
-
-
-
 <!-- 
+<test  name="Login To Application">
+			<classes>
+				<class name="loginUsingDataProvider.Login"></class>
+			</classes>
+</test>
+
 <test  name="CorrectUserName">
 <parameter name="username" value="rekaharisri@gmail.com"></parameter>
 <parameter name="password" value="Admi2/888'''"></parameter>
 <classes>
-<class name="loginTestCases.CorrectUserName"></class>
+<class name="loginUsingParameterization.CorrectUserName"></class>
 </classes>
 </test>
 
@@ -25,7 +27,7 @@
 <parameter name="username" value="rekaha@gmail.com"></parameter>
 <parameter name="password" value="Admin123///888'''"></parameter>
 <classes>
-<class name="loginTestCases.CorrectPassword"></class>
+<class name="loginUsingParameterization.CorrectPassword"></class>
 </classes>
 </test>
 
@@ -33,6 +35,6 @@
 <parameter name="username" value="rekahari@gmail.com"></parameter>
 <parameter name="password" value="Admi2/888'''"></parameter>
 <classes>
-<class name="loginTestCases.BothWrong"></class>
+<class name="loginUsingParameterization.BothWrong"></class>
 </classes>
 </test> -->

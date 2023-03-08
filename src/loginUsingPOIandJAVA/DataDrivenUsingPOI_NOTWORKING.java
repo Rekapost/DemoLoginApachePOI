@@ -9,12 +9,13 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-public class DataDrivenUsingPOI {
+public class DataDrivenUsingPOI_NOTWORKING {
 	String[][] data=null;
 	WebDriver driver;
 
@@ -32,10 +33,12 @@ public class DataDrivenUsingPOI {
 		XSSFWorkbook workBook= new XSSFWorkbook(excel);
 		XSSFSheet sheet=workBook.getSheetAt(0);
 		int noOfRows = sheet.getLastRowNum()+1;
+		//int noOfRows = sheet.getLastRowNum();
 	    int noOfColumns = sheet.getRow(0).getLastCellNum();
 	    String[][] dataTable = new String[noOfRows][noOfColumns];
 
 	    for (int i = sheet.getFirstRowNum(); i < sheet.getLastRowNum() + 1; i++) {
+	    //for (int i = sheet.getFirstRowNum(); i < sheet.getLastRowNum(); i++) {
 	        Row row = sheet.getRow(i);
 	        for (int j = row.getFirstCellNum(); j < row.getLastCellNum(); j++) {
 	            Cell cell = row.getCell(j);
@@ -48,7 +51,8 @@ public class DataDrivenUsingPOI {
 
 	@BeforeTest
 	public void beforeTest() {
-		System.setProperty("webdriver.chrome.driver","C:\\Users\\Reka\\Drivers\\chromedriver.exe");
+		//System.setProperty("webdriver.chrome.driver","C:\\Users\\Reka\\Drivers\\chromedriver.exe");
+		WebDriverManager.chromedriver().setup();
 		driver=new ChromeDriver();	
 	}
 	@AfterTest

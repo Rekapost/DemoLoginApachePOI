@@ -9,6 +9,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+import io.github.bonigarcia.wdm.WebDriverManager;
 //import io.github.bonigarcia.wdm.WebDriverManager;
 import jxl.Sheet;
 import jxl.Workbook;
@@ -39,15 +40,15 @@ public class loginTestCaseJXL {
 	}
 	
 	@DataProvider(name="loginData")
-	public String[][] input() throws BiffException, IOException {
+	public String[][] input() throws  IOException, BiffException {
 		value=excelData();
 		return value;	
 	}
 	
 	@BeforeTest
 	public void executeBefore() {
-	System.setProperty("driver.webdriver.chrome","C:\\Users\\Reka\\Drivers\\chromedriver.exe");
-	//WebDriverManager.chromedriver().setup();
+	//System.setProperty("driver.webdriver.chrome","C:\\Users\\Reka\\Drivers\\chromedriver.exe");
+	WebDriverManager.chromedriver().setup();
 	driver=new ChromeDriver();
 	}
 	@AfterTest
